@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Is Your Freelance Business Built to Scale? | kitavibez</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --orange: #BF5405;
+    --orange-light: #f5e6d8;
+    --cream: #F9F1E6;
+    --lime: #CDFC9C;
+    --lavender: #E2D5FB;
+    --purple: #661674;
+    --forest: #173734;
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --text-muted: #6b5e52;
+  }
+
+  html, body {
+    min-height: 100vh;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    background: var(--cream);
+    color: var(--black);
+  }
+
+  body {
+    background-color: var(--cream);
+    background-image: radial-gradient(circle at 80% 10%, rgba(205,252,156,0.18) 0%, transparent 50%),
+                      radial-gradient(circle at 10% 90%, rgba(102,22,116,0.08) 0%, transparent 45%);
+  }
+
+  .page-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 3rem 1rem 5rem;
+  }
+
+  /* Brand mark */
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+  .brand-logo { height: 32px; width: auto; }
+
+  /* Card */
+  .quiz-card {
+    background: var(--white);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 580px;
+    overflow: hidden;
+    box-shadow: 0 2px 40px rgba(26,26,26,0.09), 0 1px 4px rgba(26,26,26,0.06);
+  }
+
+  /* Progress */
+  .quiz-top-bar {
+    background: var(--forest);
+    padding: 1.25rem 1.75rem;
+  }
+  .progress-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-track {
+    flex: 1;
+    background: rgba(255,255,255,0.15);
+    border-radius: 99px;
+    height: 6px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--lime);
+    border-radius: 99px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .progress-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    white-space: nowrap;
+    min-width: 90px;
+    text-align: right;
+    letter-spacing: 0.04em;
+  }
+
+  /* Quiz body */
+  .quiz-body { padding: 2rem 2rem 1.75rem; }
+
+  .q-category {
+    display: inline-block;
+    background: var(--lavender);
+    color: var(--purple);
+    font-size: 11px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    padding: 4px 14px;
+    border-radius: 99px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+  }
+
+  .q-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--black);
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 1.75rem;
+  }
+
+  .option-btn {
+    background: var(--cream);
+    border: 1.5px solid #e0d5c8;
+    border-radius: 12px;
+    padding: 13px 16px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 14px;
+    color: var(--black);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  .option-btn:hover {
+    border-color: var(--orange);
+    background: var(--orange-light);
+    transform: translateX(4px);
+  }
+  .option-btn.selected {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--white);
+    transform: translateX(4px);
+  }
+
+  .option-letter {
+    width: 28px; height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    border: 1.5px solid #d4c8bb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-muted);
+    transition: all 0.18s;
+    flex-shrink: 0;
+  }
+  .option-btn.selected .option-letter {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.4);
+    color: var(--white);
+  }
+  .option-btn:hover:not(.selected) .option-letter {
+    background: #fff;
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  /* Nav */
+  .nav-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .btn-back {
+    background: transparent;
+    border: 1.5px solid #d4c8bb;
+    border-radius: 10px;
+    padding: 11px 20px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .btn-back:hover { border-color: var(--black); color: var(--black); }
+
+  .btn-next {
+    flex: 1;
+    background: var(--orange);
+    border: none;
+    border-radius: 10px;
+    padding: 13px 24px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--white);
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .btn-next:hover:not(:disabled) {
+    background: #a84804;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(191,84,5,0.3);
+  }
+  .btn-next:disabled {
+    background: #d4c8bb;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Intro */
+  .intro-hero {
+    background: var(--forest);
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .intro-hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: var(--lime);
+    border-radius: 50%;
+    opacity: 0.12;
+  }
+  .intro-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 20px;
+    width: 100px; height: 100px;
+    background: var(--orange);
+    border-radius: 50%;
+    opacity: 0.15;
+  }
+  .intro-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--lime);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    position: relative; z-index: 1;
+  }
+  .intro-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 28px;
+    line-height: 1.25;
+    color: var(--white);
+    font-weight: 400;
+    position: relative; z-index: 1;
+    margin-bottom: 0;
+  }
+  .intro-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--lime);
+  }
+
+  .intro-body { padding: 1.75rem 2rem 2rem; }
+  .intro-sub {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+  }
+  .intro-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+  }
+  .pill {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 99px;
+  }
+  .pill-lime { background: var(--lime); color: var(--forest); }
+  .pill-lav { background: var(--lavender); color: var(--purple); }
+  .pill-cream { background: var(--cream); color: var(--text-muted); border: 1px solid #d4c8bb; }
+
+  .btn-start {
+    width: 100%;
+    background: var(--orange);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 32px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-start:hover {
+    background: #a84804;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(191,84,5,0.28);
+  }
+
+  /* Result */
+  .result-hero {
+    padding: 2rem 2rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-tag {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 5px 16px;
+    border-radius: 99px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.04em;
+  }
+  .tag-green { background: var(--lime); color: var(--forest); }
+  .tag-orange { background: var(--orange); color: var(--white); }
+  .tag-purple { background: var(--purple); color: var(--white); }
+
+  .result-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--black);
+    margin-bottom: 0;
+  }
+
+  .result-divider {
+    height: 1px;
+    background: #e8dfd4;
+    margin: 0 2rem;
+  }
+
+  .result-body-wrap { padding: 1.5rem 2rem 2rem; }
+
+  .score-section { margin-bottom: 1.5rem; }
+  .score-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+  .score-track {
+    background: #ede5d8;
+    border-radius: 99px;
+    height: 10px;
+    overflow: hidden;
+  }
+  .score-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  .result-body {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 14px;
+    color: #4a3f36;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-stack { display: flex; flex-direction: column; gap: 10px; }
+
+  .cta-primary {
+    width: 100%;
+    background: var(--orange);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .cta-primary:hover {
+    background: #a84804;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 18px rgba(191,84,5,0.28);
+  }
+
+  .cta-secondary {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid var(--forest);
+    border-radius: 12px;
+    padding: 13px 24px;
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--forest);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .cta-secondary:hover {
+    background: var(--forest);
+    color: var(--white);
+  }
+
+  .retake-wrap {
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid #e8dfd4;
+  }
+  .btn-retake {
+    background: none;
+    border: none;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: #b0a090;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .btn-retake:hover { color: var(--text-muted); }
+
+  /* Screens */
+  .screen { display: none; }
+  .screen.active { display: block; animation: fadeUp 0.35s ease forwards; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 480px) {
+    .q-text { font-size: 19px; }
+    .intro-title { font-size: 25px; }
+    .quiz-body { padding: 1.5rem 1.25rem 1.25rem; }
+    .intro-body { padding: 1.25rem 1.25rem 1.5rem; }
+    .result-body-wrap { padding: 1.25rem 1.25rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <div class="brand-mark">
+    <span style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;font-weight:700;color:var(--black);letter-spacing:-0.02em;">kitavibez</span>
+  </div>
+
+  <div class="quiz-card">
+
+    <!-- INTRO -->
+    <div id="screen-intro" class="screen active">
+      <div class="intro-hero">
+        <p class="intro-eyebrow">Free business audit</p>
+        <h1 class="intro-title">Is your freelance business <em>built to scale?</em></h1>
+      </div>
+      <div class="intro-body">
+        <p class="intro-sub">Most freelancers are one bad month away from burnout — and don't even know it. Answer 8 quick questions to find out exactly where your business is breaking down and what to fix first.</p>
+        <div class="intro-pills">
+          <span class="pill pill-lime">8 questions</span>
+          <span class="pill pill-cream">2 minutes</span>
+          <span class="pill pill-lav">Free results</span>
+        </div>
+        <button class="btn-start" onclick="startQuiz()">Start the quiz →</button>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <div id="screen-quiz" class="screen">
+      <div class="quiz-top-bar">
+        <div class="progress-row">
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+          <div class="progress-text" id="progress-text">1 of 8</div>
+        </div>
+      </div>
+      <div class="quiz-body">
+        <div class="q-category" id="q-category">Income</div>
+        <div class="q-text" id="q-text"></div>
+        <div class="options" id="options-list"></div>
+        <div class="nav-row">
+          <button class="btn-back" id="btn-back" onclick="prevQ()" style="display:none;">← Back</button>
+          <button class="btn-next" id="btn-next" onclick="nextQ()" disabled>Continue →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="screen-result" class="screen">
+      <div class="result-hero" id="result-hero"></div>
+      <div class="result-divider"></div>
+      <div class="result-body-wrap" id="result-body-wrap"></div>
+      <div class="retake-wrap">
+        <button class="btn-retake" onclick="retake()">↩ Retake the quiz</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const categories = ["Income","Clients","Onboarding","Systems","Admin","Pricing","Mindset","Growth"];
+
+const questions = [
+  {
+    text: "How would you describe your monthly income as a freelancer?",
+    options: [
+      { text: "It's consistent and predictable", score: 0 },
+      { text: "It fluctuates but I manage", score: 1 },
+      { text: "Some months are great, others are terrible", score: 2 },
+      { text: "I genuinely never know what's coming in", score: 3 }
+    ]
+  },
+  {
+    text: "How do you currently get new clients?",
+    options: [
+      { text: "I have a system — leads come to me consistently", score: 0 },
+      { text: "Mostly referrals and word of mouth", score: 1 },
+      { text: "I post and hope for the best", score: 2 },
+      { text: "I'm always scrambling to find the next one", score: 3 }
+    ]
+  },
+  {
+    text: "When you take on a new client, what happens?",
+    options: [
+      { text: "I have a clear onboarding process and it's smooth", score: 0 },
+      { text: "I figure it out as I go but it works out", score: 1 },
+      { text: "It's always a little chaotic", score: 2 },
+      { text: "Every new client feels like starting from scratch", score: 3 }
+    ]
+  },
+  {
+    text: "Do you have documented processes for how you run your business?",
+    options: [
+      { text: "Yes — everything is written down and repeatable", score: 0 },
+      { text: "Some things are, most aren't", score: 1 },
+      { text: "It's all in my head", score: 2 },
+      { text: "What processes?", score: 3 }
+    ]
+  },
+  {
+    text: "How many hours a week do you spend on admin, follow-ups, and chasing clients?",
+    options: [
+      { text: "Less than 2 hours — it's mostly automated", score: 0 },
+      { text: "2–5 hours", score: 1 },
+      { text: "5–10 hours", score: 2 },
+      { text: "Way too many — it's eating into my actual work", score: 3 }
+    ]
+  },
+  {
+    text: "How do you decide what to charge clients?",
+    options: [
+      { text: "I have a clear pricing structure based on value", score: 0 },
+      { text: "I have rough rates but I negotiate a lot", score: 1 },
+      { text: "I look at what others charge and guess", score: 2 },
+      { text: "I underprice because I'm scared to lose the client", score: 3 }
+    ]
+  },
+  {
+    text: "How often do you feel like quitting freelancing altogether?",
+    options: [
+      { text: "Rarely — I love what I've built", score: 0 },
+      { text: "Occasionally when things pile up", score: 1 },
+      { text: "More often than I'd like to admit", score: 2 },
+      { text: "Honestly, pretty often", score: 3 }
+    ]
+  },
+  {
+    text: "Do you have a plan for how you'll grow your income in the next 6 months?",
+    options: [
+      { text: "Yes, it's specific and I'm already executing", score: 0 },
+      { text: "I have a rough idea", score: 1 },
+      { text: "I'm hoping more clients just show up", score: 2 },
+      { text: "I haven't thought that far ahead", score: 3 }
+    ]
+  }
+];
+
+const results = [
+  {
+    min: 0, max: 7,
+    tag: "You're scaling smart", tagClass: "tag-green",
+    scoreColor: "#CDFC9C",
+    heroBg: "#173734",
+    title: "You're further along than most freelancers.",
+    body: "You've got the foundations — now it's time to build the machine. You're not in survival mode. You have structure, consistency, and a sense of where you're going. But there's a ceiling you keep hitting and you know it.<br><br>The freelancers who break past it aren't working harder — they have better systems, tighter marketing, and a sales process that runs without them. That's exactly what the Sales Force Program is built for.",
+    cta1: "Apply for the Sales Force Program →",
+    cta2: null
+  },
+  {
+    min: 8, max: 16,
+    tag: "Getting there", tagClass: "tag-orange",
+    scoreColor: "#BF5405",
+    heroBg: "#BF5405",
+    title: "You're working hard — but your business isn't working for you yet.",
+    body: "You're somewhere in the middle — some months are good, some are rough, and you're spending too much energy on things that should be running themselves. The problem isn't your skill. It's that you're building on a shaky foundation.<br><br>A few targeted fixes change everything. Start with the free 7 Figure Systems Playbook — your freelance systems mini course, delivered to your inbox over 5 days.",
+    cta1: "Get the free 7 Figure Systems Playbook →",
+    cta2: "Learn about the Sales Force Program"
+  },
+  {
+    min: 17, max: 24,
+    tag: "Time to rebuild", tagClass: "tag-purple",
+    scoreColor: "#661674",
+    heroBg: "#661674",
+    title: "Your business is running you. It's time to flip the script.",
+    body: "You're not lazy. You're not untalented. You're just operating without the systems that make freelancing sustainable. Right now you're reacting — to clients, to income drops, to deadlines, to everything.<br><br>No amount of hustle fixes a business with no structure underneath it. But the right systems, built once, change everything. You need this now.",
+    cta1: "Apply for the Sales Force Program — ₦50,000 →",
+    cta2: "Start free: Get the 7 Figure Systems Playbook"
+  }
+];
+
+const letters = ['A','B','C','D'];
+let current = 0;
+let answers = new Array(questions.length).fill(null);
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function startQuiz() {
+  showScreen('screen-quiz');
+  renderQ();
+}
+
+function renderQ() {
+  const q = questions[current];
+  const pct = Math.round((current / questions.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-text').textContent = (current + 1) + ' of ' + questions.length;
+  document.getElementById('q-category').textContent = categories[current];
+  document.getElementById('q-text').textContent = q.text;
+
+  const list = document.getElementById('options-list');
+  list.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn' + (answers[current] === i ? ' selected' : '');
+    btn.innerHTML = '<span class="option-letter">' + letters[i] + '</span>' + opt.text;
+    btn.onclick = () => selectOption(i);
+    list.appendChild(btn);
+  });
+
+  document.getElementById('btn-back').style.display = current > 0 ? 'block' : 'none';
+  const next = document.getElementById('btn-next');
+  next.disabled = answers[current] === null;
+  next.textContent = current === questions.length - 1 ? 'See my results →' : 'Continue →';
+}
+
+function selectOption(i) {
+  answers[current] = i;
+  document.querySelectorAll('.option-btn').forEach((b, idx) => {
+    b.className = 'option-btn' + (idx === i ? ' selected' : '');
+  });
+  document.getElementById('btn-next').disabled = false;
+}
+
+function nextQ() {
+  if (current < questions.length - 1) { current++; renderQ(); }
+  else showResult();
+}
+
+function prevQ() {
+  if (current > 0) { current--; renderQ(); }
+}
+
+function showResult() {
+  const total = answers.reduce((sum, ans, i) => sum + (ans !== null ? questions[i].options[ans].score : 0), 0);
+  const maxScore = questions.length * 3;
+  const strengthPct = Math.round(((maxScore - total) / maxScore) * 100);
+  const r = results.find(res => total >= res.min && total <= res.max) || results[2];
+
+  document.getElementById('result-hero').style.background = r.heroBg;
+  document.getElementById('result-hero').innerHTML = `
+    <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:rgba(255,255,255,0.07);border-radius:50%;"></div>
+    <span class="result-tag ${r.tagClass}">${r.tag}</span>
+    <div class="result-title" style="color:#fff;">${r.title}</div>
+  `;
+
+  document.getElementById('result-body-wrap').innerHTML = `
+    <div class="score-section">
+      <div class="score-label-row">
+        <span>Business system strength</span>
+        <span id="score-pct">0%</span>
+      </div>
+      <div class="score-track">
+        <div class="score-fill" id="score-fill" style="width:0%;background:${r.scoreColor};"></div>
+      </div>
+    </div>
+    <div class="result-body">${r.body}</div>
+    <div class="cta-stack">
+      <button class="cta-primary">${r.cta1}</button>
+      ${r.cta2 ? `<button class="cta-secondary">${r.cta2}</button>` : ''}
+    </div>
+  `;
+
+  showScreen('screen-result');
+  setTimeout(() => {
+    document.getElementById('score-fill').style.width = strengthPct + '%';
+    document.getElementById('score-pct').textContent = strengthPct + '%';
+  }, 400);
+}
+
+function retake() {
+  current = 0;
+  answers = new Array(questions.length).fill(null);
+  showScreen('screen-quiz');
+  renderQ();
+}
+</script>
+</body>
+</html>
