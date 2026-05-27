@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Is Your Freelance Business Built to Scale? | kitavibez</title>
+<title>Is Your Freelance Business Built to Scale? | kitavibezz</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,12 +28,6 @@
     color: var(--black);
   }
 
-  body {
-    background-color: var(--cream);
-    background-image: radial-gradient(circle at 80% 10%, rgba(205,252,156,0.18) 0%, transparent 50%),
-                      radial-gradient(circle at 10% 90%, rgba(102,22,116,0.08) 0%, transparent 45%);
-  }
-
   .page-wrap {
     min-height: 100vh;
     display: flex;
@@ -43,13 +37,11 @@
     padding: 3rem 1rem 5rem;
   }
 
-  /* Brand mark */
   .brand-mark {
     display: flex;
     align-items: center;
     margin-bottom: 2.5rem;
   }
-  .brand-logo { height: 32px; width: auto; }
 
   /* Card */
   .quiz-card {
@@ -115,7 +107,6 @@
 
   .q-text {
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 20px;
     line-height: 1.45;
     color: var(--black);
@@ -168,7 +159,6 @@
     align-items: center;
     justify-content: center;
     font-family: 'Libre Baskerville', serif;
-    font-style: normal;
     font-size: 11px;
     font-weight: 400;
     color: var(--text-muted);
@@ -213,7 +203,6 @@
     border-radius: 10px;
     padding: 13px 24px;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;
@@ -270,7 +259,6 @@
   }
   .intro-title {
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 28px;
     line-height: 1.25;
     color: var(--white);
@@ -288,7 +276,6 @@
   .intro-body { padding: 1.75rem 2rem 2rem; }
   .intro-sub {
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 14.5px;
     color: var(--text-muted);
     line-height: 1.85;
@@ -319,7 +306,6 @@
     border-radius: 12px;
     padding: 15px 32px;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 15px;
     font-weight: 400;
     color: var(--white);
@@ -330,6 +316,129 @@
     background: #a84804;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(191,84,5,0.28);
+  }
+
+  /* Email gate */
+  .gate-hero {
+    background: var(--forest);
+    padding: 2.5rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .gate-hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    background: var(--lime);
+    border-radius: 50%;
+    opacity: 0.12;
+  }
+  .gate-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--lime);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+    position: relative; z-index: 1;
+  }
+  .gate-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--white);
+    font-weight: 400;
+    position: relative; z-index: 1;
+  }
+  .gate-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--lime);
+  }
+  .gate-body { padding: 1.75rem 2rem 2rem; }
+  .gate-sub {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .gate-field {
+    margin-bottom: 12px;
+  }
+  .gate-field label {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+  }
+  .gate-field input {
+    width: 100%;
+    border: 1.5px solid #e0d5c8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 14px;
+    color: var(--black);
+    background: var(--cream);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .gate-field input:focus {
+    border-color: var(--orange);
+    background: var(--white);
+  }
+  .gate-field input::placeholder { color: #b0a090; }
+  .btn-gate-submit {
+    width: 100%;
+    background: var(--orange);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 32px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+  }
+  .btn-gate-submit:hover:not(:disabled) {
+    background: #a84804;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(191,84,5,0.28);
+  }
+  .btn-gate-submit:disabled {
+    background: #d4c8bb;
+    cursor: not-allowed;
+    transform: none;
+  }
+  .gate-privacy {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 11px;
+    color: #b0a090;
+    text-align: center;
+    margin-top: 12px;
+  }
+  .gate-error {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12px;
+    color: #c0392b;
+    margin-top: 8px;
+    display: none;
+    padding: 8px 12px;
+    background: #fdf0ee;
+    border-radius: 8px;
+    border: 1px solid #f0c8c2;
   }
 
   /* Result */
@@ -355,7 +464,6 @@
 
   .result-title {
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.35;
@@ -371,22 +479,35 @@
 
   .result-body-wrap { padding: 1.5rem 2rem 2rem; }
 
-  .score-section { margin-bottom: 1.5rem; }
-  .score-label-row {
+  /* Score bars */
+  .score-section { margin-bottom: 1.75rem; }
+  .score-overall-row {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
-    color: var(--text-muted);
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .score-overall-label {
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 300;
-    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .score-overall-number {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--black);
+    line-height: 1;
   }
   .score-track {
     background: #ede5d8;
     border-radius: 99px;
     height: 10px;
     overflow: hidden;
+    margin-bottom: 1.25rem;
   }
   .score-fill {
     height: 100%;
@@ -394,13 +515,211 @@
     transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
   }
 
+  .category-scores {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background: var(--cream);
+    border-radius: 14px;
+  }
+  .cat-score-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .cat-score-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--text-muted);
+    width: 80px;
+    flex-shrink: 0;
+  }
+  .cat-score-track {
+    flex: 1;
+    background: #ddd4c8;
+    border-radius: 99px;
+    height: 5px;
+    overflow: hidden;
+  }
+  .cat-score-fill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .cat-score-pct {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--text-muted);
+    width: 28px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .cat-score-status {
+    font-size: 10px;
+    width: 16px;
+    flex-shrink: 0;
+  }
+
+  .result-diagnosis {
+    margin-bottom: 1.5rem;
+  }
+  .diagnosis-heading {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
   .result-body {
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 14px;
     color: #4a3f36;
     line-height: 1.9;
+    margin-bottom: 0;
+  }
+
+  /* Offer box */
+  .offer-box {
+    border-radius: 16px;
+    overflow: hidden;
     margin-bottom: 1.5rem;
+  }
+  .offer-box-header {
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .offer-box-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .offer-box-price-wrap {
+    text-align: right;
+  }
+  .offer-price-original {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: line-through;
+  }
+  .offer-price-now {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+  .offer-box-body {
+    padding: 1rem 1.25rem 1.25rem;
+    background: var(--cream);
+  }
+  .offer-box-desc {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 13px;
+    color: #4a3f36;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .offer-what-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1rem;
+  }
+  .offer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12.5px;
+    color: #4a3f36;
+    line-height: 1.5;
+  }
+  .offer-item-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  /* Countdown timer */
+  .countdown-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fff8f0;
+    border: 1px solid #f5d9bb;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+  }
+  .countdown-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--orange);
+    flex: 1;
+  }
+  .countdown-timer {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: 0.05em;
+  }
+
+  /* Social proof */
+  .social-proof {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+    padding: 10px 14px;
+    background: #f0fae8;
+    border: 1px solid #c8f0a0;
+    border-radius: 10px;
+  }
+  .social-proof-avatars {
+    display: flex;
+    margin-right: 4px;
+  }
+  .avatar-circle {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+    margin-left: -6px;
+    font-family: 'Fraunces', serif;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 600;
+  }
+  .avatar-circle:first-child { margin-left: 0; }
+  .social-proof-text {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 12px;
+    color: var(--forest);
+    line-height: 1.5;
+  }
+  .social-proof-text strong {
+    font-weight: 700;
   }
 
   .cta-stack { display: flex; flex-direction: column; gap: 10px; }
@@ -412,13 +731,14 @@
     border-radius: 12px;
     padding: 14px 24px;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-style: normal;
     font-size: 14px;
     font-weight: 400;
     color: var(--white);
     cursor: pointer;
     transition: all 0.2s;
     text-align: center;
+    text-decoration: none;
+    display: block;
   }
   .cta-primary:hover {
     background: #a84804;
@@ -440,10 +760,67 @@
     cursor: pointer;
     transition: all 0.2s;
     text-align: center;
+    text-decoration: none;
+    display: block;
   }
   .cta-secondary:hover {
     background: var(--forest);
     color: var(--white);
+  }
+
+  /* Share */
+  .share-wrap {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e8dfd4;
+    text-align: center;
+  }
+  .share-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .share-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+  .share-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    border: 1.5px solid #d4c8bb;
+    background: var(--white);
+    color: var(--text-muted);
+  }
+  .share-btn:hover {
+    border-color: var(--black);
+    color: var(--black);
+  }
+
+  /* Inbox note */
+  .inbox-note {
+    margin-top: 1rem;
+    padding: 12px 16px;
+    background: #f0f8ff;
+    border: 1px solid #c8dff0;
+    border-radius: 10px;
+  }
+  .inbox-note-text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    color: #2c5f8a;
+    line-height: 1.6;
   }
 
   .retake-wrap {
@@ -474,11 +851,14 @@
   }
 
   @media (max-width: 480px) {
-    .q-text { font-size: 19px; }
-    .intro-title { font-size: 25px; }
+    .q-text { font-size: 18px; }
+    .intro-title { font-size: 24px; }
     .quiz-body { padding: 1.5rem 1.25rem 1.25rem; }
     .intro-body { padding: 1.25rem 1.25rem 1.5rem; }
     .result-body-wrap { padding: 1.25rem 1.25rem 1.5rem; }
+    .gate-body { padding: 1.25rem 1.25rem 1.5rem; }
+    .result-hero { padding: 1.5rem 1.25rem 1.25rem; }
+    .result-divider { margin: 0 1.25rem; }
   }
 </style>
 </head>
@@ -486,7 +866,7 @@
 <div class="page-wrap">
 
   <div class="brand-mark">
-    <span style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;font-weight:700;color:var(--black);letter-spacing:-0.02em;">kitavibez</span>
+    <span style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;font-weight:700;color:var(--black);letter-spacing:-0.02em;">kitavibezz</span>
   </div>
 
   <div class="quiz-card">
@@ -498,13 +878,13 @@
         <h1 class="intro-title">Is your freelance business <em>built to scale?</em></h1>
       </div>
       <div class="intro-body">
-        <p class="intro-sub">Most freelancers are one bad month away from burnout — and don't even know it. Answer 8 quick questions to find out exactly where your business is breaking down and what to fix first.</p>
+        <p class="intro-sub">Most freelancers are one bad month away from burnout — and don't even know it. Answer 10 quick questions to find out exactly where your business is breaking down and what to fix first.</p>
         <div class="intro-pills">
-          <span class="pill pill-lime">8 questions</span>
-          <span class="pill pill-cream">2 minutes</span>
+          <span class="pill pill-lime">10 questions</span>
+          <span class="pill pill-cream">3 minutes</span>
           <span class="pill pill-lav">Free results</span>
         </div>
-        <button class="btn-start" onclick="startQuiz()">Start the quiz →</button>
+        <button class="btn-start" onclick="startQuiz()">Start the audit →</button>
       </div>
     </div>
 
@@ -515,7 +895,7 @@
           <div class="progress-track">
             <div class="progress-fill" id="progress-fill" style="width:0%"></div>
           </div>
-          <div class="progress-text" id="progress-text">1 of 8</div>
+          <div class="progress-text" id="progress-text">1 of 10</div>
         </div>
       </div>
       <div class="quiz-body">
@@ -529,13 +909,35 @@
       </div>
     </div>
 
+    <!-- EMAIL GATE -->
+    <div id="screen-gate" class="screen">
+      <div class="gate-hero">
+        <p class="gate-eyebrow">Almost there</p>
+        <h2 class="gate-title">Your results are ready. <em>Where should we send them?</em></h2>
+      </div>
+      <div class="gate-body">
+        <p class="gate-sub">Enter your name and email to unlock your personalised audit — including your weakest area, what's really holding you back, and the exact next step to fix it.</p>
+        <div class="gate-field">
+          <label>First name</label>
+          <input type="text" id="gate-name" placeholder="What do they call you?" autocomplete="given-name" oninput="checkGateForm()" />
+        </div>
+        <div class="gate-field">
+          <label>Email address</label>
+          <input type="email" id="gate-email" placeholder="your@email.com" autocomplete="email" oninput="checkGateForm()" />
+        </div>
+        <div class="gate-error" id="gate-error">Something went wrong. Please check your details and try again.</div>
+        <button class="btn-gate-submit" id="btn-gate-submit" onclick="submitGate()" disabled>Unlock my results →</button>
+        <p class="gate-privacy">🔒 No spam. Ever. Just your results and relevant resources.</p>
+      </div>
+    </div>
+
     <!-- RESULT -->
     <div id="screen-result" class="screen">
       <div class="result-hero" id="result-hero"></div>
       <div class="result-divider"></div>
       <div class="result-body-wrap" id="result-body-wrap"></div>
       <div class="retake-wrap">
-        <button class="btn-retake" onclick="retake()">↩ Retake the quiz</button>
+        <button class="btn-retake" onclick="retake()">↩ Retake the audit</button>
       </div>
     </div>
 
@@ -543,19 +945,48 @@
 </div>
 
 <script>
-const categories = ["Income","Clients","Onboarding","Systems","Admin","Pricing","Mindset","Growth"];
+// ─── CONVERTKIT CONFIG ─────────────────────────────────────────────────────
+// Swap these three values out when you're ready to go live:
+const CONVERTKIT_FORM_ID = "YOUR_FORM_ID_HERE";   // e.g. "1234567" — from your CK form settings
+const CONVERTKIT_API_KEY = "YOUR_API_KEY_HERE";   // Account → Settings → Advanced → API Key
+
+const TAGS = {
+  ebook:    "YOUR_EBOOK_TAG_ID",     // Tag applied for: Monetize Your Mind segment
+  playbook: "YOUR_PLAYBOOK_TAG_ID",  // Tag applied for: 7 Figure Systems segment
+  trellis:  "YOUR_TRELLIS_TAG_ID"    // Tag applied for: Trellis segment
+};
+// ──────────────────────────────────────────────────────────────────────────
+
+// UTM capture
+function getUTMParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source:   params.get('utm_source')   || '',
+    utm_medium:   params.get('utm_medium')   || '',
+    utm_campaign: params.get('utm_campaign') || '',
+    utm_content:  params.get('utm_content')  || '',
+    utm_term:     params.get('utm_term')     || ''
+  };
+}
+
+const categories = [
+  "Income","Clients","Onboarding","Systems","Admin",
+  "Pricing","Mindset","Growth","Your Numbers","Investment"
+];
 
 const questions = [
   {
-    text: "How would you describe your monthly income as a freelancer?",
+    category: "Income",
+    text: "How would you describe your monthly income right now?",
     options: [
-      { text: "It's consistent and predictable", score: 0 },
-      { text: "It fluctuates but I manage", score: 1 },
+      { text: "Consistent and predictable — I know what's coming in", score: 0 },
+      { text: "It fluctuates but I can manage it", score: 1 },
       { text: "Some months are great, others are terrible", score: 2 },
       { text: "I genuinely never know what's coming in", score: 3 }
     ]
   },
   {
+    category: "Clients",
     text: "How do you currently get new clients?",
     options: [
       { text: "I have a system — leads come to me consistently", score: 0 },
@@ -565,15 +996,17 @@ const questions = [
     ]
   },
   {
+    category: "Onboarding",
     text: "When you take on a new client, what happens?",
     options: [
-      { text: "I have a clear onboarding process and it's smooth", score: 0 },
-      { text: "I figure it out as I go but it works out", score: 1 },
+      { text: "I have a clear process and it's smooth every time", score: 0 },
+      { text: "I figure it out as I go but it usually works out", score: 1 },
       { text: "It's always a little chaotic", score: 2 },
       { text: "Every new client feels like starting from scratch", score: 3 }
     ]
   },
   {
+    category: "Systems",
     text: "Do you have documented processes for how you run your business?",
     options: [
       { text: "Yes — everything is written down and repeatable", score: 0 },
@@ -583,24 +1016,27 @@ const questions = [
     ]
   },
   {
+    category: "Admin",
     text: "How many hours a week do you spend on admin, follow-ups, and chasing clients?",
     options: [
-      { text: "Less than 2 hours — it's mostly automated", score: 0 },
+      { text: "Under 2 hours — most of it is automated", score: 0 },
       { text: "2–5 hours", score: 1 },
       { text: "5–10 hours", score: 2 },
       { text: "Way too many — it's eating into my actual work", score: 3 }
     ]
   },
   {
+    category: "Pricing",
     text: "How do you decide what to charge clients?",
     options: [
-      { text: "I have a clear pricing structure based on value", score: 0 },
+      { text: "I have a clear pricing structure based on value delivered", score: 0 },
       { text: "I have rough rates but I negotiate a lot", score: 1 },
       { text: "I look at what others charge and guess", score: 2 },
       { text: "I underprice because I'm scared to lose the client", score: 3 }
     ]
   },
   {
+    category: "Mindset",
     text: "How often do you feel like quitting freelancing altogether?",
     options: [
       { text: "Rarely — I love what I've built", score: 0 },
@@ -610,52 +1046,43 @@ const questions = [
     ]
   },
   {
+    category: "Growth",
     text: "Do you have a plan for how you'll grow your income in the next 6 months?",
     options: [
-      { text: "Yes, it's specific and I'm already executing", score: 0 },
+      { text: "Yes, it's specific and I'm already executing on it", score: 0 },
       { text: "I have a rough idea", score: 1 },
       { text: "I'm hoping more clients just show up", score: 2 },
       { text: "I haven't thought that far ahead", score: 3 }
     ]
-  }
-];
-
-const results = [
-  {
-    min: 0, max: 7,
-    tag: "You're scaling smart", tagClass: "tag-green",
-    scoreColor: "#CDFC9C",
-    heroBg: "#173734",
-    title: "You're further along than most freelancers.",
-    body: "You've got the foundations — now it's time to build the machine. You're not in survival mode. You have structure, consistency, and a sense of where you're going. But there's a ceiling you keep hitting and you know it.<br><br>The freelancers who break past it aren't working harder — they have better systems, tighter marketing, and a sales process that runs without them. That's exactly what the Sales Force Program is built for.",
-    cta1: "Apply for the Sales Force Program →",
-    cta2: null
   },
   {
-    min: 8, max: 16,
-    tag: "Getting there", tagClass: "tag-orange",
-    scoreColor: "#BF5405",
-    heroBg: "#BF5405",
-    title: "You're working hard — but your business isn't working for you yet.",
-    body: "You're somewhere in the middle — some months are good, some are rough, and you're spending too much energy on things that should be running themselves. The problem isn't your skill. It's that you're building on a shaky foundation.<br><br>A few targeted fixes change everything. Start with the free 7 Figure Systems Playbook — your freelance systems mini course, delivered to your inbox over 5 days.",
-    cta1: "Get the free 7 Figure Systems Playbook →",
-    cta2: "Learn about the Sales Force Program"
+    category: "Your Numbers",
+    text: "What does your freelance business currently bring in each month?",
+    options: [
+      { text: "Under ₦100k/month — I'm still building", score: 0, earner: "starter" },
+      { text: "₦100k – ₦500k/month — I'm growing steadily", score: 1, earner: "growing" },
+      { text: "₦500k – ₦1M/month — I'm doing well but have gaps", score: 2, earner: "established" },
+      { text: "Above ₦1M/month — I'm a high earner but I need structure", score: 3, earner: "high" }
+    ]
   },
   {
-    min: 17, max: 24,
-    tag: "Time to rebuild", tagClass: "tag-purple",
-    scoreColor: "#661674",
-    heroBg: "#661674",
-    title: "Your business is running you. It's time to flip the script.",
-    body: "You're not lazy. You're not untalented. You're just operating without the systems that make freelancing sustainable. Right now you're reacting — to clients, to income drops, to deadlines, to everything.<br><br>No amount of hustle fixes a business with no structure underneath it. But the right systems, built once, change everything. You need this now.",
-    cta1: "Apply for the Sales Force Program — ₦50,000 →",
-    cta2: "Start free: Get the 7 Figure Systems Playbook"
+    category: "Investment",
+    text: "If you found the right solution today, how much are you willing to invest to fix your business?",
+    options: [
+      { text: "Under ₦20k — I need a high-value, low-risk entry point", score: 0, budget: "low" },
+      { text: "₦20k – ₦100k — I'm ready to invest in the right resource", score: 1, budget: "mid" },
+      { text: "₦100k – ₦500k — I'm serious and ready to commit", score: 2, budget: "high" },
+      { text: "₦500k and above — I want a done-with-you transformation", score: 3, budget: "premium" }
+    ]
   }
 ];
 
 const letters = ['A','B','C','D'];
 let current = 0;
 let answers = new Array(questions.length).fill(null);
+let earnerId = null;
+let budgetId = null;
+let resultType = null;
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -672,7 +1099,7 @@ function renderQ() {
   const pct = Math.round((current / questions.length) * 100);
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('progress-text').textContent = (current + 1) + ' of ' + questions.length;
-  document.getElementById('q-category').textContent = categories[current];
+  document.getElementById('q-category').textContent = q.category;
   document.getElementById('q-text').textContent = q.text;
 
   const list = document.getElementById('options-list');
@@ -701,53 +1128,428 @@ function selectOption(i) {
 
 function nextQ() {
   if (current < questions.length - 1) { current++; renderQ(); }
-  else showResult();
+  else goToGate();
 }
 
 function prevQ() {
   if (current > 0) { current--; renderQ(); }
 }
 
-function showResult() {
+function goToGate() {
+  // Resolve result type before showing gate
+  resolveResult();
+  showScreen('screen-gate');
+}
+
+function resolveResult() {
+  // Get earner and budget from last two questions
+  const earnerAns = answers[8];
+  const budgetAns = answers[9];
+
+  earnerId = earnerAns !== null ? questions[8].options[earnerAns].earner : 'starter';
+  budgetId = budgetAns !== null ? questions[9].options[budgetAns].budget : 'low';
+
+  // Budget is primary driver
+  if (budgetId === 'premium') {
+    resultType = 'trellis';
+  } else if (budgetId === 'high') {
+    // High budget but check if they're high earner with clients
+    resultType = (earnerId === 'high' || earnerId === 'established') ? 'trellis' : 'playbook';
+  } else if (budgetId === 'mid') {
+    resultType = 'playbook';
+  } else {
+    // Low budget
+    resultType = (earnerId === 'starter' || earnerId === 'growing') ? 'ebook' : 'playbook';
+  }
+}
+
+// ── EMAIL GATE ──────────────────────────────────────────────────────────────
+function checkGateForm() {
+  const name  = document.getElementById('gate-name').value.trim();
+  const email = document.getElementById('gate-email').value.trim();
+  const valid = name.length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  document.getElementById('btn-gate-submit').disabled = !valid;
+}
+
+async function submitGate() {
+  const name  = document.getElementById('gate-name').value.trim();
+  const email = document.getElementById('gate-email').value.trim();
+  const errEl = document.getElementById('gate-error');
+  const btn   = document.getElementById('btn-gate-submit');
+
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  const utms = getUTMParams();
+  const tagId = TAGS[resultType];
+
+  try {
+    // Subscribe to ConvertKit form
+    const payload = {
+      api_key: CONVERTKIT_API_KEY,
+      first_name: name,
+      email: email,
+      fields: {
+        result_type: resultType,
+        earner_tier: earnerId,
+        budget_tier: budgetId,
+        utm_source:   utms.utm_source,
+        utm_medium:   utms.utm_medium,
+        utm_campaign: utms.utm_campaign,
+        utm_content:  utms.utm_content,
+        utm_term:     utms.utm_term
+      }
+    };
+
+    const res = await fetch(
+      `https://api.convertkit.com/v3/forms/${CONVERTKIT_FORM_ID}/subscribe`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }
+    );
+
+    if (!res.ok) throw new Error('Subscribe failed');
+    const data = await res.json();
+
+    // Apply segment tag
+    if (tagId && tagId !== 'YOUR_EBOOK_TAG_ID' && data.subscription && data.subscription.subscriber) {
+      const subscriberId = data.subscription.subscriber.id;
+      await fetch(
+        `https://api.convertkit.com/v3/tags/${tagId}/subscribe`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: CONVERTKIT_API_KEY, email: email })
+        }
+      );
+    }
+
+    showResult(name);
+  } catch (err) {
+    // If CK isn't configured yet (placeholder keys), still show result in dev
+    if (CONVERTKIT_FORM_ID === 'YOUR_FORM_ID_HERE') {
+      showResult(name);
+    } else {
+      errEl.style.display = 'block';
+      errEl.textContent = 'Something went wrong — please check your email and try again.';
+      btn.disabled = false;
+      btn.textContent = 'Unlock my results →';
+    }
+  }
+}
+
+// ── RESULTS ─────────────────────────────────────────────────────────────────
+const resultData = {
+  ebook: {
+    heroBg: '#661674',
+    tag: 'Your foundation needs work',
+    tagClass: 'tag-purple',
+    title: 'You\'re at the starting line. The gap between here and where you want to be is smaller than you think.',
+    scoreColor: '#a855c8',
+    diagnosis: `You're not behind because you're not talented. You're behind because nobody taught you how to package your skills into a business that actually makes money. Right now you're guessing — at your rates, your positioning, your offers. That guesswork is costing you time, clients, and confidence every single day.
+
+The fix isn't to hustle harder. It's to understand the fundamentals of how freelance income actually works — how to position yourself, build an offer worth paying for, and create the kind of presence that attracts clients without chasing them.
+
+That's exactly what the Monetize Your Mind ebook is built to do. It's the foundation you need before anything else makes sense.`,
+    social: { count: '1,200+', text: 'freelancers used this to start earning consistently' },
+    avatarColors: ['#661674','#BF5405','#173734'],
+    offerBg: '#661674',
+    offerTitle: 'Monetize Your Mind',
+    offerSubtitle: 'The freelancer\'s foundation ebook',
+    offerOriginal: null,
+    offerPrice: 'Free',
+    offerDesc: 'The complete guide to packaging your skills, positioning your offer, and landing your first (or next) paying clients — without begging, discounting, or burning out.',
+    offerItems: [
+      'How to identify and package your most sellable skill',
+      'The positioning framework that makes clients come to you',
+      'How to price your services without underselling yourself',
+      'Building your first offer that actually converts',
+      'The mindset shifts that separate struggling from scaling freelancers'
+    ],
+    dotColor: '#661674',
+    cta1Text: 'Get the Monetize Your Mind ebook →',
+    cta1Link: 'https://nestuge.com/monetize-your-mind-ebook',
+    cta2Text: null,
+    cta2Link: null,
+    showTimer: false,
+    tag_key: 'ebook'
+  },
+  playbook: {
+    heroBg: '#BF5405',
+    tag: 'The middle is costing you money',
+    tagClass: 'tag-orange',
+    title: 'You\'re capable of more. Your business just isn\'t built to deliver it yet.',
+    scoreColor: '#BF5405',
+    diagnosis: `You've got clients. You're making money. But something isn't adding up — the income is inconsistent, the admin is consuming you, and the growth you want keeps feeling just out of reach. You're not struggling because you lack skill. You're struggling because your business is running on duct tape and good intentions instead of actual systems.
+
+Here's what's really happening: you're doing the work of three people — the service provider, the marketer, and the operations manager — with none of the infrastructure that makes any of it sustainable. Every new client is a fresh scramble. Every slow month is a crisis. Every late payment is a reminder that you're not in control.
+
+The 7 Figure Systems Playbook was built specifically for freelancers at your stage. It gives you the exact systems — for clients, for income, for admin, for growth — that turn a chaotic one-person operation into a business that actually works without you having to hold it together every single day.
+
+This is not theory. It's a step-by-step implementation guide.`,
+    social: { count: '800+', text: 'freelancers implemented these systems in under 30 days' },
+    avatarColors: ['#BF5405','#173734','#661674'],
+    offerBg: '#BF5405',
+    offerTitle: '7 Figure Systems Playbook',
+    offerSubtitle: 'The freelance systems implementation guide',
+    offerOriginal: '₦20,000',
+    offerPrice: '₦10,000',
+    offerDesc: 'A complete, practical guide to building the systems that make your freelance business consistent, profitable, and scalable — without hiring a team or working more hours.',
+    offerItems: [
+      'The client acquisition system that brings in leads on repeat',
+      'Onboarding process that impresses clients and saves you hours',
+      'Pricing and packaging framework to charge what you\'re worth',
+      'Admin automation that buys back 5–10 hours a week',
+      'A 6-month income growth roadmap built for your stage'
+    ],
+    dotColor: '#BF5405',
+    cta1Text: 'Get the Playbook at 50% off — ₦10,000 →',
+    cta1Link: 'https://kitavibezz.com/7-figure-systems/',
+    cta2Text: null,
+    cta2Link: null,
+    showTimer: true,
+    tag_key: 'playbook'
+  },
+  trellis: {
+    heroBg: '#173734',
+    tag: 'You\'re ready for the real thing',
+    tagClass: 'tag-green',
+    title: 'Your income is there. Now it\'s time to build the operation around it.',
+    scoreColor: '#CDFC9C',
+    diagnosis: `You've proven you can earn. You have clients, you have income, and you have a track record. But the business you've built is almost entirely dependent on you — your time, your energy, your personal bandwidth. That's not a business. That's a job with no ceiling and no exit.
+
+What you're missing isn't more clients. It's the marketing and operations infrastructure that makes growth compounding instead of linear. Right now every new project adds more weight. It doesn't have to work that way.
+
+The Trellis Marketing Operations Program is a done-with-you engagement for freelancers and founders who are serious about building a sustainable, scalable operation. We go deep into your systems, your positioning, your client experience, and your growth engine — and we rebuild what isn't working, together.
+
+This is not a course. It's not a playbook. It's a high-touch working relationship designed to take your business from operator-dependent to operator-optional. If you're ready to stop trading time for money and start building something that compounds, this is it.`,
+    social: { count: '50+', text: 'founders transformed their operations through Trellis' },
+    avatarColors: ['#173734','#BF5405','#661674'],
+    offerBg: '#173734',
+    offerTitle: 'Trellis Marketing Operations',
+    offerSubtitle: 'Done-with-you business transformation',
+    offerOriginal: null,
+    offerPrice: '₦600k – ₦700k',
+    offerDesc: 'A high-touch, done-with-you engagement that rebuilds your marketing systems, client acquisition engine, and operational infrastructure — so your business grows without you having to manually hold it together.',
+    offerItems: [
+      'Full audit of your current systems, positioning, and growth blockers',
+      'Done-with-you rebuild of your client acquisition and retention systems',
+      'Marketing infrastructure that generates leads while you sleep',
+      'Operational systems that remove you as the bottleneck',
+      'Ongoing strategic support throughout the engagement'
+    ],
+    dotColor: '#173734',
+    cta1Text: 'Apply for Trellis →',
+    cta1Link: 'https://kitavibezz.com/trellis-marketing-operations-program/',
+    cta2Text: 'Start with the 7 Figure Systems Playbook first',
+    cta2Link: 'https://kitavibezz.com/7-figure-systems/',
+    showTimer: false,
+    tag_key: 'trellis'
+  }
+};
+
+// Countdown timer logic (24h from first visit, stored in sessionStorage)
+function getCountdownEnd() {
+  let end = sessionStorage.getItem('ck_quiz_countdown');
+  if (!end) {
+    end = Date.now() + 24 * 60 * 60 * 1000;
+    sessionStorage.setItem('ck_quiz_countdown', end);
+  }
+  return parseInt(end);
+}
+
+let countdownInterval = null;
+function startCountdown() {
+  const end = getCountdownEnd();
+  function tick() {
+    const remaining = Math.max(0, end - Date.now());
+    const h = Math.floor(remaining / 3600000);
+    const m = Math.floor((remaining % 3600000) / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    const timerEl = document.getElementById('countdown-timer');
+    if (timerEl) {
+      timerEl.textContent =
+        String(h).padStart(2,'0') + ':' +
+        String(m).padStart(2,'0') + ':' +
+        String(s).padStart(2,'0');
+    }
+    if (remaining <= 0 && countdownInterval) clearInterval(countdownInterval);
+  }
+  tick();
+  countdownInterval = setInterval(tick, 1000);
+}
+
+function showResult(firstName) {
+  const r = resultData[resultType];
   const total = answers.reduce((sum, ans, i) => sum + (ans !== null ? questions[i].options[ans].score : 0), 0);
   const maxScore = questions.length * 3;
   const strengthPct = Math.round(((maxScore - total) / maxScore) * 100);
-  const r = results.find(res => total >= res.min && total <= res.max) || results[2];
+
+  // Category scores for first 8 questions
+  const catNames = ["Income","Clients","Onboarding","Systems","Admin","Pricing","Mindset","Growth"];
+  const catScores = answers.slice(0,8).map((ans, i) => {
+    const raw = ans !== null ? questions[i].options[ans].score : 0;
+    return Math.round(((3 - raw) / 3) * 100);
+  });
+
+  function catStatus(pct) {
+    if (pct >= 67) return '✓';
+    if (pct >= 34) return '~';
+    return '✗';
+  }
+  function catBarColor(pct) {
+    if (pct >= 67) return '#CDFC9C';
+    if (pct >= 34) return '#BF5405';
+    return '#661674';
+  }
 
   document.getElementById('result-hero').style.background = r.heroBg;
   document.getElementById('result-hero').innerHTML = `
     <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;background:rgba(255,255,255,0.07);border-radius:50%;"></div>
     <span class="result-tag ${r.tagClass}">${r.tag}</span>
-    <div class="result-title" style="color:#fff;">${r.title}</div>
+    <div class="result-title" style="color:#fff;">${firstName ? firstName + ', ' : ''}${r.title}</div>
   `;
+
+  // Build offer items HTML
+  const offerItemsHtml = r.offerItems.map(item => `
+    <div class="offer-item">
+      <div class="offer-item-dot" style="background:${r.dotColor};opacity:0.7;"></div>
+      <span>${item}</span>
+    </div>
+  `).join('');
+
+  const timerHtml = r.showTimer ? `
+    <div class="countdown-wrap">
+      <span class="countdown-label">⚡ 50% discount expires in</span>
+      <span class="countdown-timer" id="countdown-timer">24:00:00</span>
+    </div>
+  ` : '';
+
+  const priceHtml = r.offerOriginal
+    ? `<div class="offer-price-original">${r.offerOriginal}</div><div class="offer-price-now">${r.offerPrice}</div>`
+    : `<div class="offer-price-now">${r.offerPrice}</div>`;
+
+  const cta2Html = r.cta2Text
+    ? `<a href="${r.cta2Link}" class="cta-secondary" target="_blank" rel="noopener">${r.cta2Text}</a>`
+    : '';
+
+  const avatarsHtml = r.avatarColors.map((c,i) => {
+    const initials = ['K','J','A'][i];
+    return `<div class="avatar-circle" style="background:${c};">${initials}</div>`;
+  }).join('');
+
+  const catScoreRows = catNames.map((name, i) => `
+    <div class="cat-score-row">
+      <span class="cat-score-label">${name}</span>
+      <div class="cat-score-track">
+        <div class="cat-score-fill" id="cat-fill-${i}" style="width:0%;background:${catBarColor(catScores[i])};"></div>
+      </div>
+      <span class="cat-score-pct" id="cat-pct-${i}">0%</span>
+      <span class="cat-score-status">${catStatus(catScores[i])}</span>
+    </div>
+  `).join('');
 
   document.getElementById('result-body-wrap').innerHTML = `
     <div class="score-section">
-      <div class="score-label-row">
-        <span>Business system strength</span>
-        <span id="score-pct">0%</span>
+      <div class="score-overall-row">
+        <span class="score-overall-label">Overall business strength</span>
+        <span class="score-overall-number" id="score-num">0%</span>
       </div>
       <div class="score-track">
         <div class="score-fill" id="score-fill" style="width:0%;background:${r.scoreColor};"></div>
       </div>
+      <div class="category-scores">${catScoreRows}</div>
     </div>
-    <div class="result-body">${r.body}</div>
-    <div class="cta-stack">
-      <button class="cta-primary">${r.cta1}</button>
-      ${r.cta2 ? `<button class="cta-secondary">${r.cta2}</button>` : ''}
+
+    <div class="result-diagnosis">
+      <p class="diagnosis-heading">Your diagnosis</p>
+      <div class="result-body">${r.diagnosis.replace(/\n\n/g, '<br><br>')}</div>
+    </div>
+
+    <div class="offer-box">
+      <div class="offer-box-header" style="background:${r.offerBg};">
+        <div>
+          <div class="offer-box-title">${r.offerTitle}</div>
+          <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:11px;color:rgba(255,255,255,0.65);margin-top:2px;">${r.offerSubtitle}</div>
+        </div>
+        <div class="offer-box-price-wrap">${priceHtml}</div>
+      </div>
+      <div class="offer-box-body">
+        <p class="offer-box-desc">${r.offerDesc}</p>
+        <div class="offer-what-inside">${offerItemsHtml}</div>
+        ${timerHtml}
+        <div class="social-proof">
+          <div class="social-proof-avatars">${avatarsHtml}</div>
+          <div class="social-proof-text"><strong>${r.social.count}</strong> ${r.social.text}</div>
+        </div>
+        <div class="cta-stack">
+          <a href="${r.cta1Link}" class="cta-primary" target="_blank" rel="noopener">${r.cta1Text}</a>
+          ${cta2Html}
+        </div>
+      </div>
+    </div>
+
+    <div class="share-wrap">
+      <p class="share-label">How does your score compare? Share with a freelancer friend.</p>
+      <div class="share-buttons">
+        <button class="share-btn" onclick="shareTwitter()">Share on X</button>
+        <button class="share-btn" onclick="shareWhatsApp()">Share on WhatsApp</button>
+        <button class="share-btn" onclick="copyLink()">Copy link</button>
+      </div>
+    </div>
+
+    <div class="inbox-note" style="margin-top:1.25rem;">
+      <p class="inbox-note-text">📬 Check your inbox — your full audit breakdown and recommended resources are on their way.</p>
     </div>
   `;
 
   showScreen('screen-result');
+
+  // Animate bars after a tick
   setTimeout(() => {
     document.getElementById('score-fill').style.width = strengthPct + '%';
-    document.getElementById('score-pct').textContent = strengthPct + '%';
+    document.getElementById('score-num').textContent = strengthPct + '%';
+    catScores.forEach((pct, i) => {
+      setTimeout(() => {
+        const fillEl = document.getElementById('cat-fill-' + i);
+        const pctEl  = document.getElementById('cat-pct-'  + i);
+        if (fillEl) fillEl.style.width = pct + '%';
+        if (pctEl)  pctEl.textContent  = pct + '%';
+      }, i * 80);
+    });
+    if (r.showTimer) startCountdown();
   }, 400);
+}
+
+// Share functions
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href.split('?')[0]);
+  const text = encodeURIComponent('I just took the Freelance Business Audit by @kitavibezz — find out if your business is built to scale:');
+  window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + url, '_blank');
+}
+function shareWhatsApp() {
+  const url = encodeURIComponent(window.location.href.split('?')[0]);
+  const text = encodeURIComponent('Take this free freelance business audit to find out exactly what\'s holding you back: ');
+  window.open('https://wa.me/?text=' + text + url, '_blank');
+}
+function copyLink() {
+  const link = window.location.href.split('?')[0];
+  navigator.clipboard.writeText(link).then(() => {
+    const btns = document.querySelectorAll('.share-btn');
+    btns.forEach(b => { if (b.textContent === 'Copy link') { b.textContent = 'Copied ✓'; setTimeout(() => b.textContent = 'Copy link', 2000); } });
+  });
 }
 
 function retake() {
   current = 0;
   answers = new Array(questions.length).fill(null);
+  earnerId = null;
+  budgetId = null;
+  resultType = null;
+  if (countdownInterval) clearInterval(countdownInterval);
   showScreen('screen-quiz');
   renderQ();
 }
